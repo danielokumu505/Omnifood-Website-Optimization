@@ -1,4 +1,20 @@
-///////////////////////////////////////////////////////////
+console.log("dsjkjd");
+const myName = "Ojwengle";
+console.log(myName);
+const h1 = document.querySelector(".heading-primary");
+console.log(h1);
+
+// h1.addEventListener("click", function () {
+//   h1.textContent = myName;
+//   h1.style.backgroundColor = "blue";
+//   h1.style.padding = "5rem";
+// });
+
+const currentYear = new Date().getFullYear();
+const year = document.querySelector(".year");
+year.textContent = currentYear;
+
+//////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement("div");
