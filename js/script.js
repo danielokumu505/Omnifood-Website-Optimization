@@ -1,4 +1,3 @@
-console.log("dsjkjd");
 const myName = "Ojwengle";
 console.log(myName);
 const h1 = document.querySelector(".heading-primary");
@@ -31,15 +30,28 @@ console.log(allLinks);
 
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (event) {
-    event.preventDefault(); //prevents default page action behavior
     const href = link.getAttribute("href");
 
     //Scroll back to the top
     if (href === "#") {
+      event.preventDefault(); //prevents default page action behavior
       window.scrollTo({
-        top: 0,
+        top: 0, //scroll to works with specific pixel number(0 pixels in this case)
         behavior: "smooth",
       });
+    }
+
+    //Scroll to specific section
+    if (href !== "#" && href.startsWith("#")) {
+      event.preventDefault(); //prevents default page action behavior
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: "smooth" });
+    } //scrollintoview involves defining a target element
+    //In this case the element has been selected using its id
+
+    //Close mobile navigation
+    if (link.classList.contains("main-nav-link")) {
+      headerEl.classList.remove("nav-open");
     }
   });
 });
