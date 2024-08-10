@@ -70,6 +70,8 @@ html {
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
   overflow-x: hidden;
+
+  /* scroll-behavior: smooth;enables scroll animation for page anchors */
 }
 
 body {
@@ -83,7 +85,7 @@ body {
 }
 
 /**************************/
-/* GENRAL REUSABLE COMPONENTS */
+/* GENERAL REUSABLE COMPONENTS */
 /**************************/
 
 .container {
