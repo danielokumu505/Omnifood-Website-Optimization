@@ -124,7 +124,7 @@
   /* MOBILE NAVIGATION */
   .btn-mobile-nav {
     display: block;
-    z-index: 10;
+    z-index: 30;
   }
 
   .main-nav {
